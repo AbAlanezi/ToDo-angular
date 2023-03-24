@@ -1,0 +1,8 @@
+.todo-item{
+background: #eee;
+padding: 5px;
+margin: 5px;
+}
+.todo-completed{
+background: #48c37f
+}

@@ -1,0 +1,10 @@
+<app-to-do1
+(toggoleEvent)="toggoleToDo($event)"
+(deleteEvent)="deleteToDo($event)"
+*ngFor="let ToDo of ToDos"
+[todo]="ToDo">
+</app-to-do1>
+
+<app-add-to-do
+(addToDoEvent)="addToDo($event)">
+</app-add-to-do>
