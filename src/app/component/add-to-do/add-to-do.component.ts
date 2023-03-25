@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-
+import ToDo from 'src/app/models/todo';
 @Component({
   selector: 'app-add-to-do',
   templateUrl: './add-to-do.component.html',
@@ -27,11 +27,11 @@ export class AddToDoComponent {
 }
 
 addToDo(){
-  const todo ={
-    id: this.generateUUID,
-    name: this.text,
-    completed: false
-  }
+  const todo = new ToDo(
+      0,
+     this.text,
+     false
+  )
 
 
   this.addToDoEvent.emit(todo);

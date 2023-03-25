@@ -1,8 +1,9 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { TodoService } from 'src/app/services/todo.service';
 
 interface ToDo{
   id: number
-  name:string
+  title:string
   completed:boolean
 }
 @Component({
@@ -16,9 +17,8 @@ export class ToDo1Component implements OnInit {
  @Input() todo!: ToDo ;
  @Output() toggoleEvent = new EventEmitter();
  @Output() deleteEvent = new EventEmitter();
-  constructor() {
 
-  }
+ constructor(){}
 
   ngOnInit(): void {
 
@@ -29,8 +29,6 @@ export class ToDo1Component implements OnInit {
 
   }
   delete(todo: ToDo){
-    this.deleteEvent.emit(todo)
-
+      this.deleteEvent.emit(todo)
   }
-
 }
